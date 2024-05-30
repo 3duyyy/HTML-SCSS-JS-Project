@@ -1,5 +1,7 @@
+@use "../abstracts";
+
 .dropdown {
-  //   display: none;
+  display: none;
   position: absolute;
   left: 0;
   padding-top: 54px;
@@ -26,12 +28,15 @@
 
 .top-menu {
   --main-column-width: 292px;
+  --max-inner-height: calc(
+    min(582px, 100vh - 134px) - (var(--inner-padding) * 2)
+  );
 
   position: relative;
 
   &__main {
     width: var(--main-column-width);
-    height: calc(min(582px, 100vh - 134px) - (var(--inner-padding) * 2));
+    height: var(--max-inner-height);
     border-right: 1px solid var(--top-menu-border-color);
     overflow-y: auto;
   }
@@ -46,12 +51,16 @@
     flex-shrink: 0; //Tránh bị méo khi thay ảnh hay phần content dài quá
     width: 36px;
     height: 36px;
+
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
   }
 
   &__icon-1 {
     width: 30px;
     height: 30px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__icon-2 {
@@ -60,7 +69,7 @@
     bottom: 0;
     width: 24px;
     height: 24px;
-    object-fit: cover;
+    object-fit: contain;
 
     filter: var(--menu-column-icon-color);
   }
@@ -74,11 +83,12 @@
   }
 
   &__item {
-    &:hover .sub-menu {
+    &--active .sub-menu {
       display: grid;
     }
   }
 
+  &__item--active > &__link,
   &__item:hover > &__link {
     color: #0071dc;
     font-weight: 500;
@@ -101,7 +111,7 @@
 }
 
 .menu-column ~ .menu-column {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .sub-menu {
@@ -110,10 +120,20 @@
 
   padding-left: var(--inner-padding);
 
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: var(--inner-padding);
 
   overflow-y: auto;
 
+  &--not-main {
+    position: initial;
+    inset: initial;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    height: var(--max-inner-height);
+    padding-left: 0;
+  }
 }
