@@ -22,18 +22,13 @@
 .top-bar {
   @extend %flexCenter;
   position: relative;
-  
+
   @include abstracts.breakpoint(md) {
     justify-content: space-between;
   }
 
   &__more {
-    display: none;
-
-    @include abstracts.breakpoint(lg) {
-        display: block;
-        margin-top: 3px;
-    }
+    margin-top: 3px;
   }
 }
 
@@ -45,25 +40,85 @@
   }
 
   @include abstracts.breakpoint(lg) {
+    position: fixed;
+    inset: 0 50% 0 0;
+    background: #fff;
+    margin-left: 0;
+    padding: 20px 0;
+    z-index: 9;
+
+    translate: -100%;
+    transition: 0.5s;
+
+    &.show {
+      translate: 0;
+    }
+
+    &.show ~ &__overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__close-btn {
     display: none;
+    padding: 10px 40px;
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    @include abstracts.breakpoint(lg) {
+      background: rgba($color: #000, $alpha: 0.4);
+      position: fixed;
+      inset: 0;
+      z-index: 8;
+    }
   }
 
   &__list {
     @extend %flexCenter;
+
+    @include abstracts.breakpoint(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      height: calc(100% - 26px);
+      overflow-y: auto;
+    }
   }
 
   &__item {
     &:hover .dropdown {
       display: block;
     }
+
+    @include abstracts.breakpoint(lg) {
+      width: 100%;
+    }
   }
 
   &__link {
-    display: inline-block;
-    padding: 14px 15px;
+    @extend %flexCenter;
+    gap: 6px;
+    height: 50px;
+    padding: 0 15px;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.47;
+
+    @include abstracts.breakpoint(lg) {
+      justify-content: space-between;
+      padding: 0 40px;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -76,7 +131,6 @@
     margin-left: 0;
   }
 
-
   &__group {
     @extend %flexCenter;
 
@@ -84,28 +138,25 @@
 
     background: var(--top-act-group-bg-color);
     box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-
-    @include abstracts.breakpoint(md) {
-        display: none;
-    }
   }
 
   &__btn {
     @extend %flexCenter;
     justify-content: center;
     gap: 10px;
-    
+
     min-width: 50px;
     height: 50px;
-    
+
     padding: 13px 20px;
     cursor: pointer;
   }
 
   &__btn--single {
     padding: 13px;
+
     @include abstracts.breakpoint(lg) {
-        display: none;
+      display: none;
     }
   }
 
