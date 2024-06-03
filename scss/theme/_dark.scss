@@ -19,6 +19,10 @@ html.dark {
   --menu-column-icon-color: brightness(0) saturate(100%) invert(85%) sepia(1%)
     saturate(3005%) hue-rotate(306deg) brightness(119%) contrast(95%);
 
+  // Sidebar
+  --sidebar-bg: #292E39;
+  --sidebar-shadow: rgba(23, 28, 40, 0.40);
+
   @include abstracts.breakpoint(lg) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }

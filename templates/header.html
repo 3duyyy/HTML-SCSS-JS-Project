@@ -17,10 +17,25 @@
 
     <!-- Navbar -->
     <nav id="navbar" class="navbar hide">
+      <!-- Responsive close btn -->
       <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-        <img src="./assets/icons/arrow-left.svg" alt="">
+        <img src="./assets/icons/arrow-left.svg" alt="" class="icon">
       </button>
 
+      <!-- Responsive buy & heart -->
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img src="../assets/icons/buy.svg" alt="" class="nav-btn__img icon">
+        <span class="nav-btn__title">Card</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
+
+      <a href="#!" class="nav-btn d-none d-md-flex">
+        <img src="../assets/icons/heart.svg" alt="" class="nav-btn__img icon">
+        <span class="nav-btn__title">Favorite</span>
+        <span class="nav-btn__qnt">3</span>
+      </a>
+
+      <!-- List -->
       <ul class="navbar__list js-dropdown-list">
         <li class="navbar__item">
           <a href="#!" class="navbar__link">
@@ -54,7 +69,7 @@
                         All Departments
                       </h2>
                       <ul class="menu-column__list js-menu-list">
-                        <li class="menu-column__item menu-column__item--active">
+                        <li class="menu-column__item">
                           <a href="#!" class="menu-column__link">
                             Savings & Featured Shops
                           </a>
@@ -3921,6 +3936,7 @@
             </div>
           </div>
         </li>
+
         <li class="navbar__item">
           <a href="#!" class="navbar__link">
             Grocery
@@ -4369,6 +4385,7 @@
             </div>
           </div>
         </li>
+
         <li class="navbar__item">
           <a href="#!" class="navbar__link">
             Beauty
@@ -4768,7 +4785,7 @@
 
         <button class="top-act__btn">
           <img
-            src="./assets/icons/heart.svg"
+            src="./assets/icons/buy.svg"
             alt=""
             class="icon top-act__icon"
           />
