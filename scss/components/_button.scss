@@ -1,0 +1,43 @@
+// Filter Button
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 0 14px;
+  border-radius: 6px;
+  height: 36px;
+
+  background: var(--filter-bg-btn);
+  color: var(--filter-color-btn);
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.43;
+}
+
+// Like Button
+.like-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  background: var(--like-btn-bg);
+  box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.20);
+
+  &:not(&--liked) .like-btn__icon--liked {
+    display: none;
+  }
+
+  &--liked .like-btn__icon {
+    display: none;
+  }
+
+  &__icon--liked {
+    margin-top: 10px; //căn giữa icon khi liked
+  }
+}
