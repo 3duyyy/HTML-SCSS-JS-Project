@@ -173,6 +173,7 @@ select {
   font-size: inherit;
   font-family: inherit;
   color: inherit;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1985,6 +1986,84 @@ select {
   margin-left: 6px;
 }
 
+.filter-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.filter {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--filter-bg);
+  box-shadow: 0px 40px 90px var(--filter-shadow);
+}
+.filter__heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.filter__form {
+  margin-top: 30px;
+}
+.filter__form-label {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.filter__form-label--small {
+  font-size: 1.4rem;
+  line-height: 1.43;
+  margin-bottom: 10px;
+}
+.filter__form-group {
+  margin-top: 20px;
+}
+.filter__form-group--inline {
+  display: flex;
+  gap: 30px;
+}
+.filter__form-slider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #d2d1d6;
+}
+.filter__form-slider::before, .filter__form-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 6px solid #ffb700;
+  background: var(--filter-bg);
+}
+.filter__form-slider::before {
+  left: 10%;
+}
+.filter__form-slider::after {
+  left: 60%;
+}
+.filter__form-input {
+  width: 121px;
+  height: 36px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.43;
+  padding: 0 12px;
+  border: 1px solid #d2d1d6;
+  border-radius: 6px;
+}
+.filter__row {
+  display: flex;
+  flex: 1;
+}
+
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
@@ -2008,6 +2087,8 @@ html.dark {
   --product-card-bg: #171C28;
   --product-card-shadow: rgba(0, 0, 0, 0.20);
   --product-card-shadow-hover: rgba(195, 108, 22, 0.06);
+  --filter-bg: #292E39;
+  --filter-shadow: rgba(0, 0, 0, 0.40);
   --filter-bg-btn: #171c28;
   --filter-color-btn: #fff;
   --like-btn-bg: #292E39;
@@ -2037,6 +2118,8 @@ html {
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.2);
   --product-card-shadow-hover: rgba(0, 0, 0, 0.2);
+  --filter-bg: #fff;
+  --filter-shadow: rgba(200, 200, 200, 0.40);
   --filter-bg-btn: #fff;
   --filter-color-btn: #6C6C72;
   --like-btn-bg: #fff;
