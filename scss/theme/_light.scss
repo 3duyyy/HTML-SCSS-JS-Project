@@ -6,6 +6,8 @@ html {
     saturate(910%) hue-rotate(210deg) brightness(99%) contrast(97%);
 
   --body-bg-color: #f6f6f6;
+
+  // Header
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
@@ -42,6 +44,10 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
+
+  // Footer
+  --footer-bg-color: #eee;
+
   //Buttons
   --filter-bg-btn: #fff;
   --filter-color-btn: #6c6c72;
