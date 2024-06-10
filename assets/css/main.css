@@ -1640,7 +1640,6 @@ input {
   transition-duration: 0.2s;
 }
 .footer__social-link--facebook {
-  padding: 10px 0;
   background: #0866ff;
 }
 .footer__social-link--youtube {
