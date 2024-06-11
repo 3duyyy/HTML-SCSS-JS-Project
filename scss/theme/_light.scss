@@ -47,6 +47,10 @@ html {
 
   // Footer
   --footer-bg-color: #eee;
+  
+  @include abstracts.screen(lg) {
+    --footer-bg-color: #fff;
+  }
 
   //Buttons
   --filter-bg-btn: #fff;

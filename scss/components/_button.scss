@@ -46,6 +46,11 @@
 
 // Buttons
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   height: 46px;
   border-radius: 6px;
   padding: 0 20px;
@@ -67,6 +72,7 @@
   }
 
   &--primary {
+    color: #171c28;
     background: #ffb700;
   }
 
