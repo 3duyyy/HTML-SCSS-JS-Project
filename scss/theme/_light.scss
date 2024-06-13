@@ -7,7 +7,7 @@ html {
 
   --body-bg-color: #f6f6f6;
 
-  // Header
+  // ===============Header========================
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
@@ -26,6 +26,7 @@ html {
   --sidebar-bg: #fff;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
 
+  // ===============Main===============
   // Categories item
   --cate-item-bg: #eee;
   --cate-item-thumb-bg: #fff;
@@ -52,9 +53,14 @@ html {
     --footer-bg-color: #fff;
   }
 
-  //Buttons
+  // ======================Auth=========================
+  --auth-content-bg: #fff;
+
+  //=====================Buttons========================
   --filter-bg-btn: #fff;
   --filter-color-btn: #6c6c72;
 
   --like-btn-bg: #fff;
+
+
 }

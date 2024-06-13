@@ -1,0 +1,128 @@
+.form {
+  margin-top: 30px;
+
+  &:has(:invalid) &__btn-submit {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &__group {
+    margin-top: 30px;
+
+    &--inline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__error {
+    display: none;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: red;
+  }
+
+  &__input-icon-error {
+    display: none;
+    animation: shake 0.5s;
+  }
+
+  &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+    .form__text-input {
+      border-color: red;
+      background: rgba($color: red, $alpha: 0.1);
+    }
+
+    .form__error,
+    .form__input-icon-error {
+      display: block;
+    }
+
+    .form__input-icon {
+      display: none;
+    }
+  }
+
+  &__text-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    height: 50px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1.5px solid #d2d1d6;
+    transition: border-color;
+    transition-duration: 0.25s;
+
+    &:focus-within {
+      border-color: #000;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    height: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+
+    &::placeholder {
+      color: #d2d1d6;
+      font-weight: 400;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    // user-select: none;
+
+    &-label {
+      margin-left: 29px;
+      color: #9e9da8;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 146.667%;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+    }
+
+    &::before {
+      width: 19px;
+      height: 19px;
+      border-radius: 4px;
+      border: 2px solid #9e9da8;
+    }
+  }
+
+  &__checkbox:has(:checked) {
+    &::before {
+      border-color: #ffb700;
+      background: #ffb700;
+    }
+
+    &::after {
+      top: 5px;
+      left: 2px;
+      width: 15px;
+      height: 8px;
+
+      border: 2px solid;
+      border-color: transparent transparent #fff #fff;
+      
+      rotate: -45deg;
+    }
+  }
+}

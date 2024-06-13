@@ -33,24 +33,172 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <!-- Script -->
     <script src="./assets/js/scripts.js"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header id="header"></header>
-    <script>
-        load("#header", "./templates/header.html")
-    </script>
-
     <!-- Main -->
-    <h1>Sign up Page</h1>
+    <main class="auth">
+      <!-- Intro -->
+      <div class="auth__intro">
+        <!-- Responsive Logo -->
+        <a href="/" class="logo auth__intro-logo d-none d-md-flex">
+          <img
+            src="./assets/icons/logo.svg"
+            alt="grocerymart"
+            class="logo__img"
+          />
+          <h1 class="logo__title">grocerymart</h1>
+        </a>
+        <!-- Intro content -->
+        <img src="./assets/img/Auth/Intro.svg" alt="" class="auth__intro-img" />
+        <p class="auth__intro-text">
+          The best of luxury brand values, high quality products, and innovative
+          services
+        </p>
 
-    <!-- Footer -->
-    <footer id="footer"></footer>
+        <button
+          class="btn auth__intro-next d-none d-md-flex js-toggle"
+          toggle-target="#auth__content"
+        >
+          <img src="./assets/img/Auth/intro-arrow.svg" alt="" />
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div id="auth__content" class="auth__content hide">
+        <div class="auth__content-inner">
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <img
+              src="./assets/icons/logo.svg"
+              alt="grocerymart"
+              class="logo__img"
+            />
+            <h1 class="logo__title">grocerymart</h1>
+          </a>
+
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__desc">
+            Let’s create your account and Shop like a pro and save money.
+          </p>
+
+          <!-- Form -->
+          <form action="./index-logined.html" class="form auth__form">
+            <div class="form__group">
+              <div class="form__text-input">
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                  class="form__input"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                />
+                <img style="width: 20px; height: 20px;"
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
+                <img
+                  src="./assets/icons/message.svg"
+                  alt=""
+                  class="form__input-icon"
+                />
+              </div>
+
+              <p class="form__error">Email chưa đúng định dạng.</p>
+            </div>
+
+            <div class="form__group">
+              <div class="form__text-input">
+                <input
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Password"
+                  class="form__input"
+                  minlength="6"
+                  required
+                />
+                <img style="width: 20px; height: 20px;"
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
+                <img
+                  src="./assets/icons/lock.svg"
+                  alt=""
+                  class="form__input-icon"
+                />
+              </div>
+
+              <p class="form__error">Mật khẩu ít nhất 6 kí tự.</p>
+            </div>
+
+            <div class="form__group">
+              <div class="form__text-input">
+                <input
+                  type="password"
+                  name=""
+                  id=""
+                  placeholder="Confirm Password"
+                  class="form__input"
+                  minlength="6"
+                  required
+                />
+                <img style="width: 20px; height: 20px;"
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
+                <img
+                  src="./assets/icons/lock.svg"
+                  alt=""
+                  class="form__input-icon"
+                />
+              </div>
+
+              <p class="form__error">Mật khẩu ít nhất 6 kí tự.</p>
+            </div>
+
+            <div class="form__group form__group--inline">
+              <label class="form__checkbox">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  class="form__checkbox-input"
+                  hidden
+                  checked
+                />
+                <span class="form__checkbox-label">Set as default card</span>
+              </label>
+              <a href="#!" class="auth__link auth__link--recovery"
+                >Recovery Password</a
+              >
+            </div>
+
+            <div class="form__group auth__btn-group">
+              <button class="btn btn--primary auth__btn form__btn-submit">Sign Up</button>
+              <button class="btn btn--outline btn--no-margin auth__btn">
+                <img src="./assets/icons/google.svg" alt="" class="btn-icon" />
+                Sign in with Google
+              </button>
+            </div>
+          </form>
+
+          <p class="auth__text">
+            You have an account yet?
+            <a href="./sign-in.html" class="auth__link">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </main>
     <script>
-        load("#footer", "./templates/footer.html")
+      window.dispatchEvent(new Event("template-loaded"));
     </script>
   </body>
 </html>

@@ -1,0 +1,135 @@
+@use "../abstracts";
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+
+  &__intro,
+  &__content {
+    flex: 1;
+    padding: 0 30px;
+  }
+
+  &__intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+
+    background: var(--auth-intro-bg);
+
+    &-logo,
+    &-next {
+      position: absolute;
+      left: 50%;
+      translate: -50%;
+    }
+
+    &-logo {
+      top: 80px;
+    }
+
+    &-next {
+      bottom: 50px;
+    }
+
+    &-img {
+      max-width: 100%;
+    }
+
+    &-text {
+      max-width: 412px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 144.444%;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    background: var(--auth-content-bg);
+
+    @include abstracts.screen(md) {
+      &.hide {
+        translate: 100%;
+      }
+
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      overflow-y: auto;
+      transition: translate 0.25s;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      width: min(460px, 100%);
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+  }
+
+  &__heading {
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 146.667%;
+  }
+
+  &__desc {
+    margin-top: 10px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 146.667%;
+    color: #9e9da8;
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__link {
+    color: #0071dc;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+
+    &--recovery {
+      margin-left: auto;
+      font-size: 1.5rem;
+      line-height: 146.667%;
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin-top: 50px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 108px;
+
+    color: #9e9da8;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 144.444%;
+  }
+}
