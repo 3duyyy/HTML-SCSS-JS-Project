@@ -46,14 +46,28 @@ html.dark {
   --filter-form-tag-bg: #171c28;
   --filter-form-arrow: brightness(0) saturate(100%) invert(18%) sepia(4%)
     saturate(2638%) hue-rotate(186deg) brightness(98%) contrast(92%);
-  
+
   // Footer
   --footer-bg-color: #171c28;
   --footer-text-color: #9e9da6;
 
   // ==========================Auth===============================
-  --auth-intro-bg: #171C28;
-  --auth-content-bg: inherit;
+  --auth-intro-bg: #171c28;
+  --auth-content-bg: #292e39;
+  --auth-intro-text-color: #b9babe;
+  --auth-content-heading-color: #b9babe;
+  --auth-content-text-color: #b9babe;
+
+  // Form
+  --form-placeholder-color: #b9babe;
+
+  // =================Product-detail=================
+  --product-detail-bg: #292e39;
+  --product-info-bg: #171c28;
+
+  // Breadcrumbs
+  --breadcrumbs-bg: #171c28;
+  --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 
   // ===========================Buttons==============================
   --filter-bg-btn: #171c28;

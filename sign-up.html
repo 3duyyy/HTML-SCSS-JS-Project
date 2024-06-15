@@ -76,7 +76,7 @@
               alt="grocerymart"
               class="logo__img"
             />
-            <h1 class="logo__title">grocerymart</h1>
+            <h2 class="logo__title">grocerymart</h2>
           </a>
 
           <h1 class="auth__heading">Sign Up</h1>
@@ -86,6 +86,7 @@
 
           <!-- Form -->
           <form action="./index-logined.html" class="form auth__form">
+            <!-- Mail -->
             <div class="form__group">
               <div class="form__text-input">
                 <input
@@ -97,7 +98,8 @@
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                   required
                 />
-                <img style="width: 20px; height: 20px;"
+                <img
+                  style="width: 20px; height: 20px"
                   src="./assets/icons/form-error.svg"
                   alt=""
                   class="form__input-icon-error"
@@ -108,10 +110,10 @@
                   class="form__input-icon"
                 />
               </div>
-
-              <p class="form__error">Email chưa đúng định dạng.</p>
+              <p class="form__error">Email is not in correct format.</p>
             </div>
 
+            <!-- Password -->
             <div class="form__group">
               <div class="form__text-input">
                 <input
@@ -123,7 +125,8 @@
                   minlength="6"
                   required
                 />
-                <img style="width: 20px; height: 20px;"
+                <img
+                  style="width: 20px; height: 20px"
                   src="./assets/icons/form-error.svg"
                   alt=""
                   class="form__input-icon-error"
@@ -134,10 +137,10 @@
                   class="form__input-icon"
                 />
               </div>
-
-              <p class="form__error">Mật khẩu ít nhất 6 kí tự.</p>
+              <p class="form__error">Password at least 6 characters</p>
             </div>
 
+            <!-- Confirm Password -->
             <div class="form__group">
               <div class="form__text-input">
                 <input
@@ -149,7 +152,8 @@
                   minlength="6"
                   required
                 />
-                <img style="width: 20px; height: 20px;"
+                <img
+                  style="width: 20px; height: 20px"
                   src="./assets/icons/form-error.svg"
                   alt=""
                   class="form__input-icon-error"
@@ -161,7 +165,7 @@
                 />
               </div>
 
-              <p class="form__error">Mật khẩu ít nhất 6 kí tự.</p>
+              <p class="form__error">Password at least 6 characters</p>
             </div>
 
             <div class="form__group form__group--inline">
@@ -172,19 +176,17 @@
                   id=""
                   class="form__checkbox-input"
                   hidden
-                  checked
                 />
                 <span class="form__checkbox-label">Set as default card</span>
               </label>
-              <a href="#!" class="auth__link auth__link--recovery"
-                >Recovery Password</a
-              >
             </div>
 
             <div class="form__group auth__btn-group">
-              <button class="btn btn--primary auth__btn form__btn-submit">Sign Up</button>
+              <button class="btn btn--primary auth__btn form__btn-submit">
+                Sign Up
+              </button>
               <button class="btn btn--outline btn--no-margin auth__btn">
-                <img src="./assets/icons/google.svg" alt="" class="btn-icon" />
+                <img src="./assets/icons/google.svg" alt="" class="btn-icon icon" />
                 Sign in with Google
               </button>
             </div>
